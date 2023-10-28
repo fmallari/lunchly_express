@@ -14,7 +14,7 @@ class Customer {
     this.notes = notes;
   }
 
-  /** metods for getting/setting notes */
+  /** methods for getting/setting notes */
 
   set notes(val) {
     this._notes = val || "";
