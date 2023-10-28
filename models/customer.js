@@ -14,6 +14,26 @@ class Customer {
     this.notes = notes;
   }
 
+  /** metods for getting/setting notes */
+
+  set notes(val) {
+    this._notes = val || "";
+  }
+
+  get notes() {
+    return this._notes;
+  }
+
+  /** methods for getting/setting phone number */
+
+  set phone(val) {
+    this._phone = val || null;
+  }
+
+  get phone() {
+    return this._phone;
+  }
+
   /** find all customers. */
 
   static async all() {
@@ -51,6 +71,12 @@ class Customer {
     }
 
     return new Customer(customer);
+  }
+
+  /** property to get full name of customers */
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
   }
 
   /** get all reservations for this customer. */
